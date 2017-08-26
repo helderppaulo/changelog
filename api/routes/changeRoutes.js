@@ -5,11 +5,11 @@ module.exports = function(app) {
   // todoList Routes
   app.route('/changes')
     .get(changesList.list_all_changes)
-    .post(todoList.create_a_change);
+    .post(todoList.create_change);
 
 
   app.route('/changes/:changeId')
-    .get(changesList.read_a_change)
-    .put(changesList.update_a_change)
-    .delete(changesList.delete_a_change);
+    .get(changesList.retrieve_change)
+    .put(changesList.update_change)
+    .delete(changesList.delete_change);
 };
